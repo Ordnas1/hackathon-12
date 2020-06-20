@@ -12,3 +12,20 @@ dropdown.forEach(
         }
     })
 )
+
+//cerrar todo dropdown
+
+window.addEventListener("click", e => 
+{
+    if(!e.target.matches(".dropdown")) {
+        
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        
+        for (let i = 0; i < dropdowns.length; i++) 
+        {
+            if (dropdowns[i].classList.contains("is-visible")) {
+                dropdowns[i].classList.remove("is-visible")
+            }
+        }
+    }
+})
