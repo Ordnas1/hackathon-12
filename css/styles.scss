@@ -116,10 +116,10 @@ body {
 
 
 .accordion {
-    display: flex;
-    flex-direction: column;
-
+    
+    height: max-content;
     &__btn {
+        width: 100%;
         -webkit-appearance: none;
         cursor: pointer;
         text-align: left;
@@ -141,16 +141,20 @@ body {
 
             & + .accordion__panel {
                 display: block;
+                transform: scaleY(1);
             }
         }
     }
 
     &__panel {
-        font-family: 'Open Sans', sans-serif;
-        padding: 0 1rem;
-        display: none;
-        overflow: hidden;
         
+        font-family: 'Open Sans', sans-serif;
+        display: none;
+        padding: 0 1rem;
+        overflow: hidden;
+        transition: transform 0.3s ease-out;
+        transform-origin: top;
+        transform: scaleY(0);
     }
 
 }
