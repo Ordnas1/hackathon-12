@@ -113,6 +113,8 @@ body {
     margin: 10% 15%;
 }
 
+
+
 .accordion {
     display: flex;
     flex-direction: column;
@@ -137,19 +139,15 @@ body {
 
             & + .accordion__panel {
                 display: block;
-                
             }
         }
     }
 
     &__panel {
-        display: flex;
         font-family: 'Open Sans', sans-serif;
         padding: 0 1rem;
-        display:none;
+        display: none;
         overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s;
     }
 
 }

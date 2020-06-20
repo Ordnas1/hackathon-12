@@ -147,15 +147,9 @@ body {
 }
 
 .accordion__panel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-family: 'Open Sans', sans-serif;
   padding: 0 1rem;
   display: none;
   overflow: hidden;
-  max-height: 0;
-  -webkit-transition: max-height 0.2s;
-  transition: max-height 0.2s;
 }
 /*# sourceMappingURL=styles.css.map */
