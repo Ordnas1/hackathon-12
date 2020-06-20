@@ -34,12 +34,19 @@ window.addEventListener("click", e =>
 
 
 accordion = document.getElementById("accordion_main")
-
+acc_btns = Array.from(document.getElementsByClassName("accordion__btn"))
 accordion.addEventListener("click", e => 
 {
     if (e.target.matches(".accordion__btn")) {
-        
+
+        acc_btns.forEach(btn => 
+            {
+                if (btn.classList.contains("accordion__btn--is-active"))
+                {
+                    btn.classList.remove("accordion__btn--is-active")
+                }
+            })
+
         e.target.classList.toggle("accordion__btn--is-active")
-        
     }
 })

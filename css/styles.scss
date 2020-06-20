@@ -138,7 +138,7 @@ body {
             background-color: #ff9f1c;
 
             & + .accordion__panel {
-                display: block;
+                display: flex;
             }
         }
     }
