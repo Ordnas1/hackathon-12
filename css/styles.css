@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -105,5 +106,56 @@ body {
 
 .is-visible {
   display: block;
+}
+
+.index-main {
+  margin: 10% 15%;
+}
+
+.accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.accordion__btn {
+  -webkit-appearance: none;
+  cursor: pointer;
+  text-align: left;
+  border: none;
+  font-size: 1.5rem;
+  background-color: #ffbf69;
+  padding: 1rem 0.4rem;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.accordion__btn:hover {
+  background-color: #ff9f1c;
+}
+
+.accordion__btn--is-active {
+  background-color: #ff9f1c;
+}
+
+.accordion__btn--is-active + .accordion__panel {
+  display: block;
+}
+
+.accordion__panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0 1rem;
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 0.2s;
+  transition: max-height 0.2s;
 }
 /*# sourceMappingURL=styles.css.map */

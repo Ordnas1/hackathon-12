@@ -28,3 +28,18 @@ window.addEventListener("click", e =>
         }
     }
 })
+
+
+// Codigo acordion
+
+
+accordion = document.getElementById("accordion_main")
+
+accordion.addEventListener("click", e => 
+{
+    if (e.target.matches(".accordion__btn")) {
+        
+        e.target.classList.toggle("accordion__btn--is-active")
+        
+    }
+})
