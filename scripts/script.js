@@ -1,4 +1,4 @@
-dropdown = document.querySelectorAll(".dropdown")
+let dropdown = document.querySelectorAll(".dropdown")
 
 dropdown.forEach(
     elem => elem.addEventListener("click", e => 
@@ -33,12 +33,13 @@ window.addEventListener("click", e =>
 // Codigo acordion
 
 
-accordion = document.getElementById("accordion_main")
-acc_btns = Array.from(document.getElementsByClassName("accordion__btn"))
+let accordion = document.getElementById("accordion_main")
+let acc_btns = Array.from(document.getElementsByClassName("accordion__btn"))
 accordion.addEventListener("click", e => 
 {
     if (e.target.matches(".accordion__btn")) 
     {
+
         if(e.target.matches(".accordion__btn--is-active")) 
         {
             e.target.classList.toggle("accordion__btn--is-active");
@@ -47,9 +48,31 @@ accordion.addEventListener("click", e =>
 
         acc_btns.forEach(btn => 
             {
-                    btn.classList.remove("accordion__btn--is-active")
+                btn.classList.remove("accordion__btn--is-active")
             });
         
         e.target.classList.toggle("accordion__btn--is-active")
+
     }
+})
+
+// modal
+
+let modalbtn = document.getElementById("modal_btn")
+let modal = document.getElementById("modal_box")
+let modal_close = document.getElementById("modal_close")
+
+modalbtn.addEventListener("click", () => 
+{
+    modal.style.display = "block"
+})
+
+modal.addEventListener("click",(e) =>
+{
+    if (e.target == modal) modal.style.display = "none"
+})
+
+modal_close.addEventListener("click",() =>
+{
+    modal.style.display = "none"
 })

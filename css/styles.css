@@ -136,16 +136,18 @@ body {
 
 .accordion__btn:hover {
   background-color: #ff9f1c;
+  -webkit-transition: background-color 0.4s ease-out;
+  transition: background-color 0.4s ease-out;
 }
 
 .accordion__btn--is-active {
   background-color: #ff9f1c;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
 }
 
 .accordion__btn--is-active + .accordion__panel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 
 .accordion__panel {
@@ -153,5 +155,75 @@ body {
   padding: 0 1rem;
   display: none;
   overflow: hidden;
+}
+
+.modal-cont {
+  margin: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modalbox__btn {
+  padding: 1em 2em;
+  font-size: 2rem;
+  border: none;
+  background-color: #ff9f1c;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__content {
+  background-color: snow;
+  margin: 15% auto;
+  padding: 1rem;
+  border: 1px solid gainsboro;
+  width: 80%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.modal__content h2 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.modal .flex-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.modal .flex-cont p {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+}
+
+.modal__close {
+  cursor: pointer;
+  color: slategray;
+  float: right;
+  font-size: 1.4rem;
+}
+
+.modal__close:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
