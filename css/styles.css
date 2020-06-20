@@ -37,6 +37,7 @@ body {
 .navbar > ul > li {
   padding: 1rem 0.7rem;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .navbar > ul > li:hover {
