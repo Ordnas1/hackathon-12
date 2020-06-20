@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+*::after, *::before {
+    box-sizing: inherit;
+}
+
+// CSS
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    background-color: #2ec4b6;
+}
+
+.navbar > ul {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    font-family: 'Pacifico', cursive;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.navbar > ul > li {
+    padding: 1rem 0.7rem;
+    color: #ffffff;
+
+    &:hover {
+        background-color: #cbf3f0;
+        transition: background-color 0.5s;
+        transition: color 0.5s;
+        color:#ffbf69;
+
+        & > a {
+            transition: color 0.5s;
+            color:#ffbf69;
+        }
+    }
+
+    & > a {
+        color: #ffffff;
+        text-decoration: none;
+
+    }
+}
+
+.navbar .is-active {
+    color: #ffbf69;
+}
+
+.dropdown {
+    position: relative;
+   
+
+    &-content {
+        display: none;
+        position: absolute;
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        background-color: #cbf3f0;
+        width: 120px;
+
+        & > li {
+            padding: 1rem 0.7rem;
+            color: #ff9f1c;
+        
+            &:hover {
+                background-color: #2ec4b6;
+                color:#ffbf69;
+        
+                & > a {
+                    
+                    color:#ffbf69;
+                }
+            }
+        
+            & > a {
+                color: #ffffff;
+                text-decoration: none;
+        
+            }
+        }
+    }
+}
+
+.is-visible {
+    display: block;
+}
