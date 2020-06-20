@@ -17,8 +17,7 @@ dropdown.forEach(
 
 window.addEventListener("click", e => 
 {
-    if(!e.target.matches(".dropdown")) {
-        
+    if(!e.target.matches(".dropdown") && !e.target.matches(".dropdown > span")) {
         let dropdowns = document.getElementsByClassName("dropdown-content");
         
         for (let i = 0; i < dropdowns.length; i++) 
